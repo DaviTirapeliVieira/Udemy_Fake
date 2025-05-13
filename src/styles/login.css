@@ -1,0 +1,250 @@
+:root {
+  --cor-de-fundo-form: #fff;
+  --cor-titulo-form: #000;
+  --cor-borda-input: #ccc;
+  --cor-borda-input-focada: #007bff;
+  --cor-botao-form: #007bff;
+  --cor-letra-botao-form: #fff;
+  --cor-botao-form-focado: #0056b3;
+  --cor-link: #007bff;
+  --cor-span-valid: #2bff00;
+  --cor-span-invalid: #ff0000;
+  --cor-img-error: #ff0000;
+}
+
+.container-screen {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+/*lado esquerdo*/
+.container-sobreposto {
+  width: 90%;
+  height: 100vh;
+  display: flex;
+}
+
+.container-imagem {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.container-imagem img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/*lado direito com formulário*/
+.formulario-conteiner {
+  position: relative;
+  width: 50%;
+  overflow: hidden;
+  background-color: var(--cor-de-fundo-form);
+}
+
+.form-logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+}
+
+.form-logo img {
+  height: 50px;
+  width: auto;
+}
+
+/* Form containers */
+.form-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.form-container h2 {
+  margin: 0 0 20px 0;
+  color: var(--cor-titulo-form);
+}
+
+/* Ativa o formulário */
+.active-form {
+  transform: translateX(0%);
+  opacity: 1;
+  z-index: 2;
+}
+
+/* desativa o outro formulário */
+.inactive-form {
+  transform: translateX(-100%);
+  opacity: 0;
+  z-index: 1;
+}
+
+/* estilo geral dos forms */
+.login-form,
+.cadastro-form {
+  width: 100%;
+  max-width: 300px;
+}
+
+.login-form input,
+.cadastro-form input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  border: 1px solid var(--cor-borda-input);
+  border-radius: 6px;
+  transition: border-color 0.3s;
+}
+
+.login-form input:focus,
+.cadastro-form input:focus {
+  border-color: var(--cor-borda-input-focada);
+  outline: none;
+}
+
+.login-form button,
+.cadastro-form button {
+  width: 6rem;
+  padding: 12px;
+  background-color: var(--cor-botao-form);
+  border: none;
+  border-radius: 6px;
+  color: var(--cor-letra-botao-form);
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  margin: 10px 0 0 0;
+}
+
+.login-form button:hover,
+.cadastro-form button:hover {
+  background-color: var(--cor-botao-form-focado);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* conteiner de erro */
+.cont-error {
+  display: none;
+  align-items: center;
+  gap: 5px;
+  margin: 5px 0 0 0;
+}
+
+.cont-error.show {
+  display: block; 
+}
+
+.span-error {
+  font-weight: bold;
+  font-size: 15px;
+  color: var(--cor-span-invalid);
+}
+
+.img-error {
+  color: var(--cor-img-error);
+  margin: 0 2px 0 0;
+  width: 20px;
+  height: 20px;
+}
+
+#span-senha-error {
+  margin: 0 0 15px 0;
+}
+
+/* link alternar forms */
+.signup-link {
+  margin: 15px 0 0 4rem;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+  width: 100%;
+  align-items: start;
+}
+
+.signup-link .btn-mov {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--cor-link);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container-screen {
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .container-sobreposto {
+    display: none;
+  }
+
+  .formulario-conteiner {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+  }
+
+  .form-container {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .form-container h2 {
+    text-align: left;
+    margin: 0 0 15px 0;
+  }
+
+  .login-form,
+  .cadastro-form {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .login-form input,
+  .cadastro-form input {
+    width: 100%;
+    margin-top: 10px 0 0 0;
+  }
+
+  .login-form button,
+  .cadastro-form button {
+    width: 10rem;
+    margin: 15px auto 0;
+    display: block;
+    align-items: center;
+    padding: 12px;
+  }
+
+  .signup-link {
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    width: 100%;
+    align-items: center;
+    margin: 10px;
+  }
+}

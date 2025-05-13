@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+# Plataforma de Cursos Online
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Descrição
 
-## Available Scripts
+Este repositório abriga o código-fonte de uma **plataforma de ensino à distância**, semelhante a serviços como a **Udemy**, construída com **React**. A aplicação tem como objetivo de fornecer uma solução completa e responsiva para publicação, aquisição e consumo de cursos online, tanto para alunos quanto para instrutores.
 
-In the project directory, you can run:
+## Funcionalidades Principais
 
-### `npm start`
+- Cadastro e login de usuários
+- Sistema de aulas com progresso do aluno
+- Página de visualização das aulas 
+- Interface responsiva para dispositivos
+- Interface de visualização de certificado
+- Ícones ilustrativos com Bootstrap Icons
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tecnologias Utilizadas
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Frontend
 
-### `npm test`
+- **React** `v19.1.0` — biblioteca principal da interface
+- **React Router DOM** `v7.6.0` — controle de navegação e rotas SPA
+- **Axios** `v1.9.0` — consumo de APIs REST
+- **CSS Puro** — estilização personalizada e modularizada
+- **Bootstrap Icons** `v1.13.1` — ícones vetoriais responsivos
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Ambiente
 
-### `npm run build`
+- **Node.js** `v22.14.0`
+- **npm** `v10.9.2`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Estrutura de Diretórios
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+components/
+├── footer/ # Componente de rodape da aplicação
+├── navbar/ # Componente de navbar da aplicação
+├── sidebar_Aula/ # Componente de visualização das seções de determinado curso
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+connection/ # Pasta com axios para o consumo de APIs REST
 
-### `npm run eject`
+src/
+├── components/ # Componentes reutilizáveis da UI
+├── connection/ # Configuração e chamadas de API via Axios
+├── pages/ # Páginas principais da aplicação
+├── styles/ # Estilos Personalizados da Aplicação
+├── App.css/ # Estilo Global da Aplicação
+├── App.js # Componente principal de rotas
+└── index.js # Ponto de entrada do React
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🛠️ Instalação e Execução
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Pré-requisitos
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Node.js `>= 22.14.0`
+- npm `>= 10.9.2`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Passos para rodar localmente
 
-## Learn More
+```bash
+# Clone o repositório
+git clone https://github.com/seu-usuario/nome-do-repositorio.git
+cd nome-do-repositorio
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Instale as dependências
+npm install
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Execute o projeto
+npm start
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Contato
 
-### Analyzing the Bundle Size
+Para sugestões, dúvidas ou oportunidades de parceria:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Desenvolvedor: **Davi Tirapeli Vieira**
+- Email: = **davitirapelivieira@outlook.com**

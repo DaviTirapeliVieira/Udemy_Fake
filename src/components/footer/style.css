@@ -1,0 +1,27 @@
+:root {
+  --cor-background: #000;
+  --cor-da-letra: #fff;
+}
+
+footer {
+  width: 100%;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: var(--cor-background);
+  color: var(--cor-da-letra);
+  padding: 20px 0px;
+  font-size: 12px;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  position: relative;
+  bottom: 0;
+  left: 0;
+}
+
+footer p {
+  margin: 0 0 6px 0;
+}

@@ -1,0 +1,45 @@
+/* Resetando estilos padrão */
+.container-player {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.video-section {
+  flex: 1;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.video-container {
+  margin-bottom: 20px;
+}
+
+video {
+  width: 70%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Aba de título da aula fixada abaixo do vídeo */
+.head-nome-aula {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 1rem 0 0 1rem;
+  border-radius: 10px;
+}
+
+.container-nome-aula {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nome-aula {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin: 0;
+}

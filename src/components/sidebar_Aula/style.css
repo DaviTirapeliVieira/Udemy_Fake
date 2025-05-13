@@ -1,0 +1,120 @@
+.curso-sidebar {
+  position: fixed;
+  right: 20px;
+  top: 80px;
+  width: 350px;
+  height: 475px;
+  background-color: #fff;
+  border-left: 1px solid #ccc;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebar-header {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  padding: 10px 0;
+  z-index: 2;
+}
+
+.sidebar-header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.sidebar-corpo {
+  height: calc(100% - 40px);
+  overflow-y: auto;
+}
+
+.section {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.section-header {
+  padding: 10px 15px;
+  font-weight: bold;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.section-content {
+  padding: 0 15px 10px;
+  color: #555;
+  font-size: 0.9rem;
+  display: none;
+}
+
+.section.open .section-content {
+  display: block;
+}
+
+.seta {
+  transition: transform 0.3s;
+}
+
+.section.open .seta {
+  transform: rotate(180deg);
+}
+
+/* Estilo da barra de progresso */
+.progress-bar {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  height: 8px;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  position: relative;
+}
+
+.progress {
+  height: 100%;
+  background-color: #4caf50;
+  border-radius: 5px;
+}
+
+.progress-bar span {
+  position: absolute;
+  right: 10px;
+  font-size: 12px;
+  color: #333;
+}
+
+@media (max-width: 1250px) {
+  .curso-sidebar {
+    transform: translateX(100%); /* Esconde a sidebar à direita */
+  }
+
+  .sidebar-btn {
+    display: block;
+    position: fixed;
+    right: 25px;
+    top: 90px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+  }
+}
+
+@media (min-width: 1250px) {
+  .sidebar-btn {
+    display: none;
+  }
+}
+
+.curso-sidebar.open {
+  transform: translateX(0);
+}

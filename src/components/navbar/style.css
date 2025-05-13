@@ -1,0 +1,271 @@
+:root {
+  --background-header: #fff;
+  --cor-do-a: #000;
+  --cor-do-i: #000;
+  --cor-da-borda-a: #0056b3;
+  --cor-da-borda-busca-box: #000;
+  --background-busca-box: #fff;
+  --cor-da-borda-busca-box-focus: #007bff;
+  --cor-da-borda-user: #ccc;
+  --background-modal-user: #fff;
+  --background-modal-user-hover: #f0f0f0;
+  --background-notificacao-hover: #0056b3;
+  --cor-letra-notificacao-hover: #fff;
+  --background-meu-aprendizado-hover: #0056b3;
+  --cor-letra-meu-aprendizado-hover: #fff;
+  --background-modal-notificacao: #fff;
+  --cor-da-borda-modal-notificacao: #ccc;
+  --background-meu-aprendizado: #fff;
+  --cor-da-borda-meu-aprendizado: #ccc;
+}
+
+.header {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--background-header);
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+a {
+  text-decoration: none;
+  color: var(--cor-do-a);
+}
+
+i {
+  text-decoration: none;
+  color: var(--cor-do-a);
+}
+
+.header .logo {
+  text-decoration: none;
+}
+
+.header .logo .img-logo {
+  margin: 5px 5px 5px 10px;
+  width: 50px;
+  height: 50px;
+}
+
+.header .nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 10px;
+}
+
+.header .busca-box {
+  display: flex;
+  align-items: center;
+  padding: 10px 23px;
+  border: 1px solid var(--cor-da-borda-busca-box);
+  border-radius: 50px;
+  background-color: var(--background-busca-box);
+  gap: 8px;
+}
+
+.header .busca-box input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background: transparent;
+}
+
+.busca-box:focus-within {
+  border-color: var(--cor-da-borda-busca-box-focus);
+}
+
+.header .icon-busca {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/*Aba usuario*/
+.user-menu-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.user {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  object-fit: cover;
+  border: 2px solid var(--cor-da-borda-user);
+  margin: 0 13px 0 0;
+}
+
+.modal-user {
+  position: absolute;
+  top: 53px;
+  right: 4px;
+  background-color: var(--background-modal-user);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
+  display: none;
+  flex-direction: column;
+  border-radius: 8px;
+  min-width: 150px;
+  z-index: 10;
+}
+
+.modal-user a {
+  padding: 10px 15px;
+  transition: background 0.2s;
+  display: block;
+}
+
+.modal-user a:hover {
+  background-color: var(--background-modal-user-hover);
+}
+
+/*Aba notificação*/
+.img-notificacao {
+  height: 25px;
+}
+
+.notificacao-container {
+  position: relative;
+  display: inline-block;
+}
+
+.notificacao {
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 5px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.notificacao:hover {
+  background: var(--background-notificacao-hover);
+  .bi {
+    color: var(--cor-letra-notificacao-hover);
+  }
+}
+
+.modal-notificacao {
+  position: absolute;
+  top: 53px;
+  right: 0;
+  background-color: var(--background-modal-notificacao);
+  border: 1px solid var(--cor-da-borda-modal-notificacao);
+  border-radius: 8px;
+  padding: 10px;
+  width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 10;
+}
+
+.modal-notificacao ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.modal-notificacao li {
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.modal-notificacao li:last-child {
+  border-bottom: none;
+}
+
+.notificacao-container:hover .modal-notificacao {
+  display: block;
+}
+
+/*Aba meu aprendizado*/
+.meu-aprendizado-container {
+  position: relative;
+  display: inline-block;
+}
+
+.meu-aprendizado {
+  background-color: transparent;
+  padding: 10px 5px;
+  border-radius: 12px;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.meu-aprendizado:hover {
+  background: var(--background-meu-aprendizado-hover);
+  .link-meu-aprendizado {
+    color: var(--cor-letra-meu-aprendizado-hover);
+  }
+}
+
+.modal-meu-aprendizado {
+  position: absolute;
+  top: 53px;
+  right: 0;
+  background-color: var(--background-meu-aprendizado);
+  border: 1px solid var(--cor-da-borda-meu-aprendizado);
+  border-radius: 8px;
+  padding: 10px;
+  width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 10;
+}
+
+.modal-meu-aprendizado ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.modal-meu-aprendizado li {
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.modal-meu-aprendizado li:last-child {
+  border-bottom: none;
+}
+
+.meu-aprendizado-container:hover .modal-meu-aprendizado {
+  display: block;
+}
+
+.header .navbar {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0 20px 0 0;
+  padding: 0;
+}
+
+.header .navbar li a {
+  padding: 10px 12px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.header .navbar li a:hover {
+  border: 1px solid var(--cor-da-borda-a);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .header .busca-box {
+    padding: 10px 8px;
+  }
+
+  .meu-aprendizado-container {
+    display: none;
+  }
+}
