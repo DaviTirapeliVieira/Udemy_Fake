@@ -96,10 +96,8 @@ export default function Login() {
   return (
     <div className="container-screen">
       <div className="container-sobreposto">
-        <div className="container-left">
-          <div className="container-imagem">
-            <img src="/paisagem.png" alt="imagem" />
-          </div>
+        <div className="container-imagem">
+          <img src="/paisagem.png" alt="imagem" />
         </div>
       </div>
 
@@ -122,7 +120,11 @@ export default function Login() {
               value={emailLogin}
               onChange={(e) => setEmailLogin(e.target.value)}
             />
-            <div className={`cont-error${errorLogin.emailLogin || erros.emailLogin ? 'show' : ''}`}>
+            <div
+              className={`cont-error${
+                errorLogin.emailLogin || erros.emailLogin ? "show" : ""
+              }`}
+            >
               <i class="bi bi-exclamation-triangle-fill img-error"></i>
               <span className="span-error">
                 {errorLogin.emailLogin || erros.emailLogin || ""}
@@ -134,7 +136,11 @@ export default function Login() {
               value={senhaLogin}
               onChange={(e) => setSenhaLogin(e.target.value)}
             />
-            <div className={`cont-error${errorLogin.senhaLogin || erros.senhaLogin ? 'show' : ''}`}>
+            <div
+              className={`cont-error${
+                errorLogin.senhaLogin || erros.senhaLogin ? "show" : ""
+              }`}
+            >
               <i class="bi bi-exclamation-triangle-fill img-error"></i>
               <span className="span-error">
                 {errorLogin.senhaLogin || erros.senhaLogin || ""}
@@ -164,7 +170,11 @@ export default function Login() {
               value={nome}
               onChange={(e) => setNome(e.target.value)}
             />
-            <div className={`cont-error${errorCadastro.nome || erros.nome ? 'show' : ''}`}>
+            <div
+              className={`cont-error${
+                errorCadastro.nome || erros.nome ? "show" : ""
+              }`}
+            >
               <i class="bi bi-exclamation-triangle-fill img-error"></i>
               <span className="span-error">
                 {errorCadastro.nome || erros.nome || ""}
@@ -176,7 +186,11 @@ export default function Login() {
               value={emailCadastro}
               onChange={(e) => setEmailCadastro(e.target.value)}
             />
-            <div className={`cont-error${errorCadastro.emailCadastro || erros.emailCadastro ? 'show' : ''}`}>
+            <div
+              className={`cont-error${
+                errorCadastro.emailCadastro || erros.emailCadastro ? "show" : ""
+              }`}
+            >
               <i class="bi bi-exclamation-triangle-fill img-error"></i>
               <span className="span-error">
                 {errorCadastro.emailCadastro || erros.emailCadastro || ""}
@@ -188,7 +202,11 @@ export default function Login() {
               value={senhaCadastro}
               onChange={(e) => setSenhaCadastro(e.target.value)}
             />
-            <div className={`cont-error${errorCadastro.senhaCadastro || erros.senhaCadastro ? 'show' : ''}`}>
+            <div
+              className={`cont-error${
+                errorCadastro.senhaCadastro || erros.senhaCadastro ? "show" : ""
+              }`}
+            >
               <i class="bi bi-exclamation-triangle-fill img-error"></i>
               <span className="span-error">
                 {errorCadastro.senhaCadastro || erros.senhaCadastro || ""}
